@@ -112,29 +112,42 @@ class SevSegDisp{
 
     void update(std::string);
 
-    void updateTimer() {
-        int num = number;
+    void startTimer() {
+        std::thread timerThread([this](){
+            while (number < 999) {
+                std::this_thread::sleep_for(std::chrono::seconds(1));
+                increment();
+            }
+        });
+        timerThread.detach(); // Detach the thread to run independently
+    }
+
+    void updateTimer(std::string prepend) {
+        int num = number; // Capture the current timer value atomically if required
         int digits[noOfDigits];
+        int homeLine = writeBuf.getCurrLine();
+
         for (int i = noOfDigits - 1; i >= 0; --i) {
             digits[i] = num % 10;
             num /= 10;
         }
+
         for (int row = 0; row < 5; ++row) {
+            writeBuf.goToLine(homeLine + row);
+            writeBuf << reset << prepend;
             for (int dig = 0; dig < noOfDigits; ++dig) {
-                std::cout << numbers[digits[dig]][row] << " ";
+                writeBuf << red_fg << numbers[digits[dig]][row] << " ";
             }
-            std::cout << std::endl;
+            writeBuf << endl;
         }
     }
 
     void updateTimerNumber() {
-        while (number < 999) {
-            system("clear"); // Clear the console screen (use "cls" on Windows)
-            updateTimer();
-            std::this_thread::sleep_for(std::chrono::seconds(1));
+        if (number <= 999) {
             increment();
         }
     }
+
 
     void increment() {
         if (number < std::pow(10, noOfDigits) - 1) {
