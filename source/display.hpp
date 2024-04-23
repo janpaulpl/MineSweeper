@@ -39,7 +39,7 @@ void dispTimerCounter()
     writeBuf << white_fg << R"(   | |_(_)_ __ ___   ___ _ __   )" << endl; 
     writeBuf << white_fg << R"(   | __| | '_ ` _ \ / _ \ '__|  )" << endl;
     writeBuf << white_fg << R"(   | |_| | | | | | |  __/ |     )" << endl;   
-    writeBuf << white_fg << R"(   \__|_|_| |_| |_|\___|_ |      )" << endl;
+    writeBuf << white_fg << R"(    \__|_|_| |_| |_|\___|_|      )" << endl;
 
     timerDisp.updateTimer("      ");
 }
