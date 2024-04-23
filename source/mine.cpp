@@ -41,7 +41,7 @@ int main()
     
     while (true)
     {
-        if (std::chrono::steady_clock::now() - lastTime >= std::chrono::seconds(1)) {
+        if (std::chrono::steady_clock::now() - lastTime >= std::chrono::seconds(0)) {
             system("clear");
             lastTime = std::chrono::steady_clock::now();
 
