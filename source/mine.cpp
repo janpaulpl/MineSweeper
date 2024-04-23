@@ -19,6 +19,8 @@ int main()
         dispBanner();
         field.drawField();
         dispFlagCounter();
+        dispTimerCounter();
+        timerDisp.updateTimerNumber();
         
         if (gameState != RUNNING)
             dispVictoryOrDefeat();
