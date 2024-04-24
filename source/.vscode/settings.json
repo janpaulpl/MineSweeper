@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.bril": "rust",
+    "iostream": "cpp"
+  }
+}
