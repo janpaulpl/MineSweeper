@@ -58,28 +58,29 @@ void dispVictoryOrDefeat()
     writeBuf << endl;
     COLOUR col = gameState == VICTORY ? green_fg : red_fg;
 
-    writeBuf << col << R"(  __   _____  _   _ )" << endl;
-    writeBuf << col << R"(  \ \ / / _ \| | | |)" << endl;
-    writeBuf << col << R"(   \ V / (_) | |_| |)" << endl;
-    writeBuf << col << R"(    |_| \___/ \___/ )" << endl;
+    writeBuf << endl;
+    writeBuf << col << R"(      __   _____  _   _ )" << endl;
+    writeBuf << col << R"(      \ \ / / _ \| | | |)" << endl;
+    writeBuf << col << R"(       \ V / (_) | |_| |)" << endl;
+    writeBuf << col << R"(        |_| \___/ \___/ )" << endl;
 
     writeBuf << endl;
 
     if (gameState == VICTORY)
     {
 
-        writeBuf << col << R"(  __      _____ _  _ _ )" << endl;
-        writeBuf << col << R"(  \ \    / /_ _| \| | |)" << endl;
-        writeBuf << col << R"(   \ \/\/ / | || .` |_|)" << endl;
-        writeBuf << col << R"(    \_/\_/ |___|_|\_(_))" << endl;
+        writeBuf << col << R"(      __      _____ _  _ _ )" << endl;
+        writeBuf << col << R"(      \ \    / /_ _| \| | |)" << endl;
+        writeBuf << col << R"(       \ \/\/ / | || .` |_|)" << endl;
+        writeBuf << col << R"(        \_/\_/ |___|_|\_(_))" << endl;
     }
 
     else
     {
-        writeBuf << col << R"(   _    ___  ___ ___ _ )" << endl;
-        writeBuf << col << R"(  | |  / _ \/ __| __| |)" << endl;
-        writeBuf << col << R"(  | |_| (_) \__ \ _||_|)" << endl;
-        writeBuf << col << R"(  |____\___/|___/___(_))" << endl;
+        writeBuf << col << R"(      _    ___  ___ ___ _ )" << endl;
+        writeBuf << col << R"(     | |  / _ \/ __| __| |)" << endl;
+        writeBuf << col << R"(     | |_| (_) \__ \ _||_|)" << endl;
+        writeBuf << col << R"(     |____\___/|___/___(_))" << endl;
     }
 }
 
