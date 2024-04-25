@@ -21,26 +21,24 @@ void dispBanner()
                                       |_|          )";
     std::cout << reset << endl;
 }
-
+                     
 void dispFlagCounter()
 {
-    writeBuf << white_fg << R"(                (_)               )" << endl;
-    writeBuf << white_fg << R"(   _ __ ___  _ _ __   ___ ___ )" << endl;
-    writeBuf << white_fg << R"(  | '_ ` _ \| | '_ \ / _ / __|)" << endl;
-    writeBuf << white_fg << R"(  | | | | | | | | | |  __\__ \)" << endl;
-    writeBuf << white_fg << R"(  |_| |_| |_|_|_| |_|\___|___/)" << endl;
+    writeBuf << white_fg << R"(              _             )" << endl;
+    writeBuf << white_fg << R"(    _____|_|___ ___ ___ )" << endl;
+    writeBuf << white_fg << R"(   |     | |   | -_|_ -|)" << endl;
+    writeBuf << white_fg << R"(   |_|_|_|_|_|_|___|___|)" << endl;
     writeBuf << reset;
 
     flagDisp.update("      ");
 }
-
+                     
 void dispTimerCounter() 
 {
-    writeBuf << white_fg << R"(    _   _                       )" << endl;                     
-    writeBuf << white_fg << R"(   | |_(_)_ __ ___   ___ _ __   )" << endl; 
-    writeBuf << white_fg << R"(   | __| | '_ ` _ \ / _ \ '__|  )" << endl;
-    writeBuf << white_fg << R"(   | |_| | | | | | |  __/ |     )" << endl;   
-    writeBuf << white_fg << R"(    \__|_|_| |_| |_|\___|_|      )" << endl;
+    writeBuf << white_fg << R"(    _   _               )" << endl;                     
+    writeBuf << white_fg << R"(   | |_|_|_____ ___ ___ )" << endl; 
+    writeBuf << white_fg << R"(   |  _| |     | -_|  _|)" << endl;
+    writeBuf << white_fg << R"(   |_| |_|_|_|_|___|_|  )" << endl;   
 
     timerDisp.updateTimer("      ");
 }
